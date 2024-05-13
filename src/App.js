@@ -1,8 +1,15 @@
 import React from "react";
+import "./App.css";
 
 const App = () => {
   return (
-    <h1>SPE Final project</h1>
+    <div className="root">
+      <div className="header"></div>
+      <div className="body">
+        <div className="upload-root"></div>
+        <div className="convert-root"></div>
+      </div>
+    </div>
   );
 }
 
