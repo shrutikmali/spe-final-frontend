@@ -1,0 +1,61 @@
+.header-root {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header-title {
+    position: absolute;
+    font-size: 32px;
+    width: 48px;
+}
+
+.header-btns {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.btn {
+    font-size: 18px;
+    color: white;
+    width: 96px;
+    height: 48px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-weight: bolder;
+    outline: none;
+}
+
+.upload-btn {
+    background-color: orange;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.convert-btn {
+    background-color: rgb(136, 225, 255);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.upload-btn:hover {
+    color: orange;
+    border: 1px solid orange;
+    background-color: transparent;
+    border-left-color: orange;
+    border-top-color: orange;
+    border-bottom-color: orange;
+}
+
+.convert-btn:hover {
+    color: rgb(136, 225, 255);
+    border: 1px solid rgb(136, 225, 255);
+    background-color: transparent;
+    border-left-color: rgb(136, 225, 255);
+    border-top-color: rgb(136, 225, 255);
+    border-bottom-color: rgb(136, 225, 255);
+}
