@@ -16,13 +16,13 @@
     display: flex;
 }
 
-.upload-root {
+.app-upload {
     width: 50%;
     height: 100%;
     background-color: rgba(172, 255, 47, 0.488);
 }
 
-.convert-root {
+.app-convert {
     width: 50%;
     height: 100%;
     background-color: rgba(134, 47, 255, 0.488);

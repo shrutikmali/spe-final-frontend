@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import Header from "./components/header/Header";
+import Upload from "./components/upload/Upload";
 
 const App = () => {
   return (
@@ -9,8 +10,8 @@ const App = () => {
         <Header />
       </div>
       <div className="body">
-        <div className="upload-root"></div>
-        <div className="convert-root"></div>
+        <div className="app-upload"><Upload /></div>
+        <div className="app-convert"></div>
       </div>
     </div>
   );
