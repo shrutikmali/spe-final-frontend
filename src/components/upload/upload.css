@@ -8,6 +8,17 @@
     justify-content: center;
 }
 
+.upload-hint-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .upload-hint {
     font-size: 18px;
+}
+
+.image-preview {
+    align-self: center;
+    width: 99%;
 }

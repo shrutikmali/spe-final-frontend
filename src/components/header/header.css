@@ -28,6 +28,9 @@
     cursor: pointer;
     font-weight: bolder;
     outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .upload-btn {
