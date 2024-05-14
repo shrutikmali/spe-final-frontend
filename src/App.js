@@ -6,7 +6,7 @@ import Conversion from "./components/conversion/Conversion";
 
 const App = () => {
 
-  const SERVER_ADDRESS = "http://192.168.229.144:8080"
+  const SERVER_ADDRESS = "http://handwriting-recogniser-service.com";
 
   const [file, setFile] = useState(null);
 	const [imageURL, setImageURL] = useState(null);
