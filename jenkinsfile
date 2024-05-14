@@ -18,6 +18,7 @@ pipeline {
         stage('Compile project') {
             steps {
                 script {
+                    sh "npm install"
                     sh "npm run build"
                 }
             }
