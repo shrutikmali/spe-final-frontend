@@ -1,10 +1,10 @@
 import React from "react";
 import "./conversion.css";
 
-const Conversion = () => {
+const Conversion = ({ text }) => {
   return (
     <div className="conversion-root">
-      <p className="conversion-text">The text in image will appear here</p>
+      <p className="conversion-text">{text}</p>
     </div>
   );
 }

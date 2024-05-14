@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import "./header.css";
 
-const Header = ({ imageURL, handleUpload }) => {
+const Header = ({ handleUpload, getText }) => {
 
 	return (
 		<div className="header-root">
@@ -9,7 +9,7 @@ const Header = ({ imageURL, handleUpload }) => {
 				<div className="header-btns">
 					<input id="file-upload" type="file" style={{display: "none"}} accept="image/*" onChange={handleUpload} max={1}/>
 					<label htmlFor="file-upload" className="btn upload-btn">Upload</label>
-					<button className="btn convert-btn">Convert</button>
+					<button className="btn convert-btn" onClick={getText}>Convert</button>
 				</div>
 		</div>
 	);
