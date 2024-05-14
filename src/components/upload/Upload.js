@@ -30,7 +30,7 @@ const Upload = ({ imageURL, handleUpload }) => {
     <div className="upload-root" onDragEnter={handleDragEnter} onDragOver={handleDragOver} onDrop={handleDrop} >
       <div className="upload-hint-div">
         {!imageURL && <p className="upload-hint">Click on the Upload button to upload an image, or drag the file into this box</p>}
-        {imageURL && <img alt="Image of your upload" src={imageURL} className="image-preview" />}
+        {imageURL && <img alt="Uploaded file" src={imageURL} className="image-preview" />}
       </div>
     </div>
   );
