@@ -8,9 +8,9 @@
       debug:
         msg: "Playbook was executed from: {{ ansible_env.PWD }}"
     - name: Apply deployment
-      shell: kubectl apply -f --validate=false frontend-deployment.yaml
+      shell: kubectl apply -f frontend-deployment.yaml --validate=false
     - name: Apply service
-      shell: kubectl apply -f --validate=false frontend-service.yaml
+      shell: kubectl apply -f frontend-service.yaml --validate=false
     - name: Apply networking
-      shell: kubectl apply -f --validate=false frontend-networking.yaml
+      shell: kubectl apply -f frontend-networking.yaml --validate=false
 
