@@ -4,6 +4,9 @@
   remote_user: shrutik15
   become: false
   tasks:
+    - name: Print the working directory from where the playbook was run
+      debug:
+        msg: "Playbook was executed from: {{ ansible_env.PWD }}"
     - name: Apply deployment
       shell: kubectl apply -f --validate=false frontend-deployment.yaml
     - name: Apply service
