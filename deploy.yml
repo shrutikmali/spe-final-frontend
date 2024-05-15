@@ -9,7 +9,7 @@
         msg: "Playbook was executed from: {{ ansible_env.PWD }} with user {{ ansible_user}}"
     - name: Apply deployment
       environment:
-        KUBECONFIG: ~/.kube/config
+        KUBECONFIG: /home/shrutik/.kube/config
       k8s:
         kubeconfig: /home/shrutik/.kube/config
         state: present
