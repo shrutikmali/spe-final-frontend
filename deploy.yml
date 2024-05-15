@@ -8,9 +8,17 @@
       debug:
         msg: "Playbook was executed from: {{ ansible_env.PWD }}"
     - name: Apply deployment
-      command: kubectl apply -f --validate=false "{{ ansible_env.PWD }}/frontend-deployment.yaml"
+      k8s:
+        state: present
+        namespace: default
+        src: frontend-deployment.yaml
     - name: Apply service
-      shell: kubectl apply -f frontend-service.yaml --validate=false
+      k8s:
+        state: present
+        namespace: default
+        src: frontend-service.yaml
     - name: Apply networking
-      shell: kubectl apply -f frontend-networking.yaml --validate=false
-
+      k8s:
+        state: present
+        namespace: default
+        src: frontend-networking.yaml
