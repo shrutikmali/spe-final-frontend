@@ -8,7 +8,7 @@
       debug:
         msg: "Playbook was executed from: {{ ansible_env.PWD }} with user {{ ansible_user}}"
     - name: Apply deployment
-      kubernetes.core.k8s:
+      k8s:
         kubeconfig: "/home/shrutik/.kube/config"
         state: present
         namespace: default
