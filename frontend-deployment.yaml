@@ -14,5 +14,6 @@ spec:
       containers:
         - name: frontend
           image: shrutik15/spe-final-frontend:latest
+          imagePullPolicy: Always
           ports:
           - containerPort: 80

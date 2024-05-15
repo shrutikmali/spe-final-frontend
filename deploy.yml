@@ -1,0 +1,12 @@
+---
+- name: Pull Docker Image from Docker Hub
+  hosts: localhost
+  remote_user: shrutik15
+  become: false
+  tasks:
+    - name: Apply deployment:
+      shell: kubectl apply -f frontend-deployment.yaml
+    - name: Apply service:
+      shell: kubectl apply -f frontend-service.yaml
+    - name: Apply networking
+      shell: kubectl apply -f frontend-networking.yaml
