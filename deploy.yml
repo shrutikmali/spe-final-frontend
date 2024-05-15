@@ -1,5 +1,5 @@
 ---
-- name: Pull Docker Image from Docker Hub
+- name: Apply changes to kubernetes
   hosts: localhost
   remote_user: shrutik15
   become: false
