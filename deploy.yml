@@ -1,12 +1,27 @@
 ---
-- name: Apply changes to kubernetes
-  hosts: localhost
-  remote_user: shrutik15
-  become: false
+#- name: Apply changes to kubernetes
+#  hosts: localhost
+#  remote_user: shrutik15
+#  become: false
+#  tasks:
+#    - name: Apply deployment
+#      shell: kubectl apply -f frontend-deployment.yaml
+#    - name: Apply service
+#      shell: kubectl apply -f frontend-service.yaml
+#    - name: Apply networking
+#      shell: kubectl apply -f frontend-networking.yaml
+
+
+- hosts: all
+  become: true
   tasks:
-    - name: Apply deployment
-      shell: kubectl apply -f frontend-deployment.yaml
-    - name: Apply service
-      shell: kubectl apply -f frontend-service.yaml
-    - name: Apply networking
-      shell: kubectl apply -f frontend-networking.yaml
+    - name: Ensure Kubernetes libraries are installed (replace with your package manager)
+      apt:
+        name: kubelet kubeadm kubectl
+        state: present
+
+    - name: Deploy your application (replace with your deployment definition)
+      kubernetes.manifest:
+        src: deployment.yaml
+        api_version: apps/v1
+        kind: Deployment
