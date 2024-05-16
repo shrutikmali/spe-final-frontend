@@ -48,9 +48,9 @@ pipeline {
 //        }
         stage('Apply Kubernetes files') {
             steps {
-//                withKubeConfig() {
+                withKubeConfig(credentialsId: 'kubernetes-secret') {
                     sh 'kubectl apply --validate=false -f "kubernetes/frontend-deployment.yaml"'
-//                }
+                }
             }
         }
         stage('Run Ansible Playbook') {
