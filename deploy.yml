@@ -10,12 +10,6 @@
     - name: Print kube-config
       command: cat ~/.kube/config
       register: cat_output
-    - debug:
-        var: cat_output.stdout
-    - name: apply deployment test
-      kubectl:
-        src: frontend-deployment.yaml
-        state: present
     - name: Apply deployment
       k8s:
         kubeconfig: '~/.kube/config'
