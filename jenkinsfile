@@ -48,9 +48,9 @@ pipeline {
 //        }
         stage('Apply Kubernetes files') {
             steps {
-                withKubeConfig() {
+//                withKubeConfig() {
                     sh 'kubectl apply --validate=false --context minikube -f "kubernetes/frontend-deployment.yaml"'
-                }
+//                }
             }
         }
         stage('Run Ansible Playbook') {
