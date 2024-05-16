@@ -41,15 +41,15 @@ pipeline {
 //                }
 //            }
 //        }
-        stage('Copy .kube/config') {
-            steps {
-                sh 'cp -r /home/shrutik/.kube .'
-            }
-        }
+//        stage('Copy .kube/config') {
+//            steps {
+//                sh 'cp -r /home/shrutik/.kube .'
+//            }
+//        }
         stage('Apply Kubernetes files') {
             steps {
                 withKubeConfig() {
-                    sh 'kubectl apply --validate=false -f "kubernetes/frontend-deployment.yaml"'
+                    sh 'kubectl apply --validate=false --context minikube -f "kubernetes/frontend-deployment.yaml"'
                 }
             }
         }
