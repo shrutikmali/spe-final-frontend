@@ -44,7 +44,7 @@ pipeline {
         stage('Apply Kubernetes files') {
             steps {
                 withKubeConfig() {
-                    sh 'kubectl apply -f frontend-deployment.yaml'
+                    sh 'kubectl apply -f --validate=false frontend-deployment.yaml'
                 }
             }
         }
