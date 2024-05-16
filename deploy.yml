@@ -2,7 +2,7 @@
 - name: Apply changes to kubernetes
   hosts: localhost
   remote_user: ansible
-  become: true
+  become: false
   tasks:
     - name: Print the working directory from where the playbook was run
       debug:
