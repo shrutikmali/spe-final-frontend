@@ -41,6 +41,11 @@ pipeline {
 //                }
 //            }
 //        }
+        stage('Copy .kube/config') {
+            steps {
+                sh 'cp -r /homme/shrutik/.kube .'
+            }
+        }
         stage('Apply Kubernetes files') {
             steps {
                 withKubeConfig() {
