@@ -1,8 +1,8 @@
 ---
 - name: Apply changes to kubernetes
   hosts: localhost
-  remote_user: shrutik15
-  become: false
+  remote_user: ansible
+  become: true
   tasks:
     - name: Print the working directory from where the playbook was run
       debug:
