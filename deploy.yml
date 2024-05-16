@@ -13,6 +13,7 @@
     - name: Apply deployment
       environment:
       k8s:
+        kubeconfig: ~/.kube/config
         state: present
         namespace: default
         src: frontend-deployment.yaml
