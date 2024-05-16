@@ -12,9 +12,7 @@
         msg: "File content: {{ lookup('file', '/kube-config/.kube/config') }}"
     - name: Apply deployment
       environment:
-        KUBECONFIG: "/kube-config/.kube/config"
       k8s:
-        kubeconfig: "/kube-config/.kube/config"
         state: present
         namespace: default
         src: frontend-deployment.yaml
