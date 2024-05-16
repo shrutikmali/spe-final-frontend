@@ -22,3 +22,12 @@
     align-self: center;
     width: 99%;
 }
+
+.upload-consent {
+    align-self: flex-end;
+    justify-self: flex-start;
+    position: absolute;
+    font-size: 12px;
+    display: flex;
+    column-gap: 6px;
+}

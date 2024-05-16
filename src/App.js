@@ -11,6 +11,7 @@ const App = () => {
   const [file, setFile] = useState(null);
 	const [imageURL, setImageURL] = useState(null);
   const [text, setText] = useState("The text in image will appear here");
+  const [saveImage, setSaveImage] = useState(false);
 
   const toBase64 = file => new Promise((resolve, reject) => {
     const reader = new FileReader();
@@ -40,8 +41,9 @@ const App = () => {
     }
     const img64 = await toBase64(file);
     const body = {
-      img: img64
-    }
+      img: img64,
+      saveImage,
+    };
     
     await fetch(`${SERVER_ADDRESS}/recognise`, {
       method: "POST",
@@ -61,7 +63,7 @@ const App = () => {
         <Header handleUpload={handleUpload}  getText={getText} />
       </div>
       <div className="body">
-        <div className="app-upload"><Upload imageURL={imageURL} handleUpload={handleUpload} /></div>
+        <div className="app-upload"><Upload imageURL={imageURL} handleUpload={handleUpload} saveImage={saveImage} setSaveImage={setSaveImage} /></div>
         <div className="app-convert"><Conversion text={text} /></div>
       </div>
     </div>
