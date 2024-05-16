@@ -18,13 +18,13 @@
         src: kubernetes/frontend-deployment.yaml
     - name: Apply service
       k8s:
-        kubeconfig: /home/shrutik/.kube/config
+        kubeconfig: '~/.kube/config'
         state: present
         namespace: default
         src: kubernetes/frontend-service.yaml
     - name: Apply networking
       k8s:
-        kubeconfig: /home/shrutik/.kube/config
+        kubeconfig: '~/.kube/config'
         state: present
         namespace: default
         src: kubernetes/frontend-networking.yaml
